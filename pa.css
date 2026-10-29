@@ -1,0 +1,136 @@
+/* Reseta heranças indesejadas e define o comportamento padrão isolado desta página */
+body {
+    display: block !important;
+    background-color: #f4f7f4 !important;
+    font-family: sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+main {
+    max-width: 1200px !important;
+    margin: 30px auto !important;
+    padding: 0 20px !important;
+    display: block !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+header {
+    background-color: #1b5e20 !important;
+    color: white !important;
+    padding: 15px 40px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+}
+
+header h2 { margin: 0 !important; }
+
+#logout {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Formulários e Seções */
+#container-recorte, #visualizar-retorno {
+    background-color: white !important;
+    border: 0.1rem solid black !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+    margin-top: 15px !important;
+}
+
+#container-recorte label {
+    display: block !important;
+    font-weight: bold !important;
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+    font-size: 0.9rem !important;
+}
+
+#container-recorte input[type="text"] {
+    width: 100% !important;
+    padding: 10px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    box-sizing: border-box !important;
+}
+
+/* Alinhamento Rígido e Seguro dos Mapas */
+#mapa, #mapa-retorno {
+    height: 400px !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+    border-radius: 6px !important;
+    border: 1px solid black !important;
+    display: block !important;
+}
+
+#mapa-retorno { height: 350px !important; }
+
+.botoes-form { display: flex !important; gap: 10px !important; margin-top: 15px !important; }
+
+.acoes button, .botoes-form button, #btn-fechar-retorno {
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 4px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
+#btn-novo-recorte, #salvar-recorte { background-color: #2e7d32 !important; color: white !important; }
+#cancelar-recorte, #btn-fechar-retorno { background-color: #757575 !important; color: white !important; }
+
+/* Grid de Organização dos Cards Inferiores */
+#lista-recortes {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+}
+
+#lista-recortes > div {
+    background-color: white !important;
+    border: 0.1rem solid black !important;
+    border-radius: 6px !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+}
+
+#lista-recortes h4 {
+    margin: 0 0 10px 0 !important;
+    font-size: 1.1rem !important;
+    border-bottom: 1px solid #eee !important;
+    padding-bottom: 5px !important;
+}
+
+#lista-recortes p { margin: 6px 0 !important; font-size: 0.9rem !important; color: #444 !important; }
+
+#lista-recortes button {
+    border: none !important;
+    padding: 10px !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    color: white !important;
+}
+
+#v-parecer {
+    padding: 15px !important;
+    background: #e8f5e9 !important;
+    border-left: 5px solid green !important;
+    border-radius: 4px !important;
+    margin-top: 15px !important;
+}

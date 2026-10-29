@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https: blob:; style-src 'self' https: 'unsafe-inline'; font-src 'self' https: data:;">
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
+</head>
+<body class="Iarticle">
+    <article>
+    <div class="cards" id="painel-inicial">Painel inicial</div>
+    <div class="cards" id="dados-agricultor">Dados do agricultor</div>
+    <div class="cards" id="historico-alertas">Histórico de alertas</div>
+    <div class="cards" id="coletas-passadas">Coletas passadas</div>
+    </article>
+        <main id="container-agricultor">
+    </main>
+    
+</body>
+<script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+<script src="./node_modules/leaflet/dist/leaflet.js"></script>
+<script type="module" src="app.js"></script>
+<script type="module" src="da.js"></script>
+</html>

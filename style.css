@@ -1,0 +1,599 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#nmain{
+        width: 100vw;
+    height: 100vh;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    width: 20%;
+    height: 100vh;
+    background-color: green;
+    border: 0.2rem solid white ;
+    display: flex;
+    flex-direction: column;
+}
+
+/*main*/
+
+.cards{
+    width: 100%;
+    height: 25%;
+    color: white;
+    border-bottom: 0.2rem solid white;
+    font-size: 1.5em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#grafico-N {
+    width: 45%;
+    height: 100%;  
+    border-radius: 6px;       
+    position: relative;      
+}
+
+#grafico-D {
+    width: 80%;
+    height: 100%;  
+    border-radius: 6px;       
+    position: relative;      
+}
+
+#grafico-ndvi {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: white; 
+    border-radius: 6px;
+    border: 0.1rem solid black; 
+    display: block !important;
+}
+
+#grafico-dh {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: white; 
+    border-radius: 6px;
+    border: 0.1rem solid black; 
+    display: block !important;
+}
+
+#informacoes{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    
+}
+
+#culturas{
+    width: 20%;
+    height: 100%;
+}
+
+table{
+    width: 100%;
+    height: 100%;
+    border: 0.1rem solid black;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+tr{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+th, td{
+    width: 33%;
+    text-align: center;
+}
+
+th{
+    background-color: green;
+    border-top-left-radius: 8px;
+    color: whitesmoke;
+
+}
+
+td{
+    border-top: 0.1rem solid whitesmoke;
+    border-right: 0.1rem solid whitesmoke
+}
+
+.cantoR{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 0px;
+    border-left: 0.1rem solid whitesmoke;
+}
+
+.meio{
+    border-top-left-radius: 0px;
+    border-left: 0.1rem solid whitesmoke;
+}
+
+#mapa-ndvi {
+    width: 100%;
+    height: 100%; 
+    border-radius: 6px;
+}
+
+#smapa{
+    width: 50%;
+    height: 100%; 
+    border-radius: 6px;
+    border: 0.1rem solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.legenda-ndvi {
+position: absolute;
+    bottom: 0.7%;            
+    left: 43.7%;              
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;           
+    font-family: sans-serif;
+    font-size: 11px;         
+    color: #333;
+    border: 1px solid #ddd;
+    pointer-events: none; 
+}
+
+
+.legenda-ndvi h4 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+
+.item-legenda {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+
+.item-legenda:last-child {
+    margin-bottom: 0;
+}
+
+
+.cor-legenda {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#parecer-tecnico {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border: 0.1rem solid black;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+#secao-parecer h3 {
+    margin: 0 0 8px 0;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+#texto-parecer {
+    width: 100%;
+    height: 60%;
+    border: 0.1rem solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    resize: none; 
+    box-sizing: border-box;
+    outline: none;
+}
+
+#texto-parecer:focus {
+    border-color: green; 
+}
+
+
+.container-upload {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+
+.botao-upload {
+    background-color: green;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    border: 0.1rem solid transparent;
+}
+
+.botao-upload:hover {
+    background-color: darkgreen; 
+}
+
+
+#nome-arquivo {
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+.card{
+    width: 80%;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 0.3rem;
+    color: green;
+    font-size: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+
+}
+
+#container-agricultor {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+#perfil-box {
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    border: 0.1rem solid black;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+}
+
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 0.15rem solid green;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.perfil-header h2 {
+    margin: 0;
+    color: #222;
+    font-size: 1.6rem;
+}
+
+.avatar-simulado {
+    font-size: 2.2rem;
+    background-color: #e2fcd4;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid green;
+}
+
+
+.perfil-dados p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #444;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 8px;
+}
+
+.perfil-dados strong {
+    color: green;
+    display: inline-block;
+    width: 200px; 
+}
+
+.badge-status {
+    background-color: green;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+.form {
+    background-color: white;
+    border: 0.15rem solid black;
+    border-radius: 8px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-family: sans-serif;
+}
+
+.form h2 {
+    margin: 0 0 10px 0;
+    color: green;
+    text-align: center;
+    font-size: 1.8rem;
+    border-bottom: 0.1rem solid #eee;
+    padding-bottom: 10px;
+}
+
+.form label {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="tel"],
+.form select {
+    width: 100%;
+    padding: 10px;
+    border: 0.1rem solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form input:focus,
+.form select:focus {
+    border-color: green;
+}
+
+
+.form input[type="submit"] {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form input[type="submit"]:hover {
+    background-color: darkgreen;
+}
+
+.form button[type="button"] {
+    background-color: transparent;
+    color: #555;
+    border: 0.1rem solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.form button[type="button"]:hover {
+    background-color: #f5f5f5;
+    color: #111;
+    border-color: #999;
+}
+
+
+
+header {
+    background-color: green;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2rem solid white;
+    font-family: sans-serif;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#logout {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#logout:hover {
+    background-color: #d32f2f;
+}
+
+.acoes {
+    padding: 20px 0 10px 0;
+}
+
+#btn-novo-recorte {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-novo-recorte:hover {
+    background-color: darkgreen;
+}
+
+
+#container-recorte {
+    background-color: white;
+    border: 0.1rem solid black !important;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-family: sans-serif;
+}
+
+#container-recorte h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+#container-recorte label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#container-recorte input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#salvar-recorte {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#cancelar-recorte {
+    background-color: #777;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+.meus-recortes {
+    margin-top: 25px;
+    font-family: sans-serif;
+}
+
+.meus-recortes h3 {
+    border-bottom: 0.1rem solid green;
+    padding-bottom: 5px;
+    color: #222;
+}
+
+#lista-recortes div {
+    background-color: white;
+    border: 0.1rem solid black !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+#lista-recortes div:hover {
+    transform: translateY(-2px);
+}
+
+
+
+
+.cards {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+
+.cards:hover {
+    background-color: darkgreen;
+    letter-spacing: 0.5px; 
+}
+
+
+.cards:active {
+    background-color: #004d00;
+}
+
+

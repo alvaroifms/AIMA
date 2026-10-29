@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https: blob:; style-src 'self' https: 'unsafe-inline'; font-src 'self' https: data:;">
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <article>
+    <div class="cards" id="painel-inicial">Painel inicial</div>
+    <div class="cards" id="dados-agricultor">Dados do agricultor</div>
+    <div class="cards" id="historico-alertas">Histórico de alertas</div>
+    <div class="cards" id="coletas-passadas">Coletas passadas</div>
+    </article>
+    <main>
+
+        <div id="informacoes">
+            <div id="grafico-N">
+                <canvas id="grafico-ndvi"></canvas>
+            </div>
+            <div id="grafico-D">
+                <canvas id="grafico-dh"></canvas>
+            </div>
+        </div>
+        <div id="informacoes">
+            <div id="smapa">
+                <div style="position: relative; width: 100%;"></div>
+                <div id="mapa-ndvi"></div>
+                <div class="legenda-ndvi">
+                    <h4>Índice de Saúde (NDVI)</h4>
+                    <div class="item-legenda">
+                        <span class="cor-legenda" style="background-color: #009900;"></span>
+                        <span>Milho Saudável (Alta Densidade)</span>
+                    </div>
+                    <div class="item-legenda">
+                        <span class="cor-legenda" style="background-color: #ccff00;"></span>
+                        <span>Desenvolvimento Médio</span>
+                    </div>
+            <div class="item-legenda">
+                <span class="cor-legenda" style="background-color: #ff8000;"></span>
+                <span>Baixo Vigor / Atenção</span>
+            </div>
+            <div class="item-legenda">
+                <span class="cor-legenda" style="background-color: #cc0000;"></span>
+                <span>Falhas Críticas / Solo Exposto</span>
+            </div>
+        </div>
+        
+    </div>
+    <div id="culturas"></div>
+    <div id="parecer-tecnico">
+                <h3>Parecer Técnico do Agrônomo</h3>
+                
+                <textarea id="texto-parecer" placeholder="Digite aqui a análise técnica da lavoura, recomendações de manejo ou observações sobre as falhas detectadas..."></textarea>
+                
+                <div class="container-upload">
+                    
+                    <input type="file" id="upload-pdf" accept=".pdf" style="display: none;" />
+                    
+                    
+                    <label for="upload-pdf" class="botao-upload">
+                         Anexar Relatório Completo (PDF)
+                    </label>
+                    
+                    
+                    <span id="nome-arquivo">Nenhum arquivo selecionado</span>
+                </div>
+                <br>
+    <button type="button" id="btn-salvar-parecer" style="background-color: green; color: white; padding: 10px 20px; border-radius: 4px; font-weight: bold; cursor: pointer; border: none;">
+        Enviar Parecer e PDF ao Agricultor
+    </button>
+            </div>
+</div>
+
+        </div>
+
+    </main>
+    
+</body>
+<script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+<script src="./node_modules/leaflet/dist/leaflet.js"></script>
+<script type="module" src="app.js"></script>
+</html>
+

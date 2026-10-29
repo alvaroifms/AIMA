@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Painel do Agricultor</title> 
+    <link rel="stylesheet" href="pa.css">
+    <!-- CSS do Leaflet (Biblioteca do Mapa) --> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> 
+    <!-- CSS do Leaflet Draw (Para desenhar os recortes no mapa) --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+</head>
+<body> 
+    <header> 
+        <h2 id="boas-vindas">Bem-vindo, Agricultor!</h2> 
+        <button id="logout">Sair</button> 
+    </header> 
+    <main> 
+        <section class="acoes"> 
+            <button id="btn-novo-recorte">+ Criar Novo Recorte de Area</button> 
+        </section> 
+
+        <!-- Container do Formulário / Mapa para recortar --> 
+        <div id="container-recorte" style="display: none; border: 1px solid #ccc; padding: 15px; margin-top: 15px;"> 
+            <h3>Selecione a área da sua plantação no mapa</h3> 
+            <label for="nome-propriedade">Nome da Propriedade / Talhão:</label> 
+            <input type="text" id="nome-propriedade" placeholder="Ex: Milho - Gleba A"> 
+            <label for="cultura">Cultura Plantada:</label> 
+            <input type="text" id="cultura" placeholder="Ex: Milho, Soja, Café..."> 
+            <p><small>Use a ferramenta de polígono/retângulo no canto do mapa para desenhar sua área.</small></p> 
+            
+            <!-- Area onde o Mapa é renderizado --> 
+            <div id="mapa" style="height: 400px; width: 100%; margin-bottom: 10px;"></div> 
+            
+            <button id="salvar-recorte">Enviar Recorte para o Agrônomo</button> 
+            <button id="cancelar-recorte" type="button">Cancelar</button> 
+        </div> 
+
+        <!-- Lista de Recortes Salvos pelo Agricultor --> 
+        <section class="meus-recortes"> 
+            <h3>Minhas Áreas Enviadas</h3> 
+            <div id="lista-recortes"></div> 
+        </section> 
+
+        <!-- SEÇÃO DE RETORNO DO LAUDO (Adicionada mantendo a integridade do layout) -->
+        <div id="visualizar-retorno" style="display: none; border: 1px solid green; padding: 20px; margin-top: 20px; border-radius: 6px; background: white;">
+            <h3 id="v-titulo">Detalhamento do Talhão</h3>
+            <div id="mapa-retorno" style="height: 350px; width: 100%; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;"></div>
+            <div id="v-parecer" style="padding: 15px; background: #e8f5e9; border-left: 5px solid green; border-radius: 4px;"></div>
+            <br>
+            <button id="btn-fechar-retorno" type="button">Fechar Visualização</button>
+        </div>
+    </main> 
+
+    <!-- JS do Leaflet e Leaflet Draw --> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script> 
+    <script src="painel-agricultor.js"></script>
+
+    <!-- O CSS ADICIONADO POR CIMA (Sem mexer em nenhuma tag ou ordem das funções) -->
+       <style>
+        #lista-recortes {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+            gap: 20px !important;
+            width: 100% !important;
+            padding: 10px 0 !important;
+        }
+        #lista-recortes > div {
+            background-color: white !important;
+            border: 0.1rem solid black !important;
+            border-radius: 6px !important;
+            padding: 20px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+        }
+        #lista-recortes h4 {
+            margin: 0 0 10px 0 !important;
+            font-size: 1.1rem !important;
+            border-bottom: 1px solid #eee !important;
+            padding-bottom: 5px !important;
+        }
+        #lista-recortes p {
+            margin: 6px 0 !important;
+            font-size: 0.9rem !important;
+            color: #444 !important;
+        }
+        #lista-recortes button {
+            border: none !important;
+            padding: 10px !important;
+            font-weight: bold !important;
+            border-radius: 4px !important;
+            cursor: pointer !important;
+            color: white !important;
+            margin-top: 10px !important;
+        }
+    </style>
+</body>
+</html>
